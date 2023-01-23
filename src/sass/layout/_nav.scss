@@ -1,0 +1,73 @@
+@use "sass:map";
+
+@use "../abstracts" as *;
+
+.nav {
+  @extend %shadow-sm;
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  background-color: map.get($colors, accent);
+
+  &__content-wrapper {
+    @include container;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__links {
+    @extend %shadow-sm;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    width: 65%;
+    background-color: map.get($colors, accent);
+    &--open {
+      display: flex;
+    }
+    @media screen and (min-width: map.get($breakpoints,sm)) {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      height: auto;
+      width: auto;
+      box-shadow: none;
+    }
+  }
+
+  &__item {
+    &--first {
+      align-self: flex-end;
+      margin-right: 0.25rem;
+    }
+  }
+
+  &__link {
+    @include touch-target;
+    padding: 0 1.25rem;
+    width: 100%;
+    text-decoration: none;
+    color: map.get($colors, dark);
+    &--active {
+      color: map.get($colors, primary);
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    color: map.get($colors, primary);
+    background-color: transparent;
+    cursor: pointer;
+    @media screen and (min-width: map.get($breakpoints,sm)) {
+      display: none;
+    }
+  }
+}

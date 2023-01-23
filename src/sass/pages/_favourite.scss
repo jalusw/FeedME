@@ -1,0 +1,6 @@
+@use "../abstracts/" as *;
+
+.favourite-main {
+  @extend %mt-10;
+  @include container;
+}

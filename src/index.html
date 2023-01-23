@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Find a restaurant" />
+    <meta name="theme-color" content="#d00" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap"
+    />
+    <title>FeedME</title>
+  </head>
+  <body>
+    <button class="btn btn--skip-to-main" id="btn-skip-to-main">
+      Skip To Main
+    </button>
+    <nav class="nav">
+      <div class="nav__content-wrapper">
+        <a class="brand" href="/#/">FeedME</a>
+        <ul class="nav__links" id="nav-menu">
+          <li class="nav__item nav__item--first">
+            <button
+              class="nav__btn"
+              id="btn-close-nav-menu"
+              type="button"
+              title="Hide Navigation Menu"
+            >
+              <i data-feather="x"></i>
+            </button>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link nav__link--active" href="/#/">Home</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="/#/favourite">Favourite</a>
+          </li>
+          <li class="nav__item">
+            <a
+              class="nav__link"
+              href="https://github.com/jalusw"
+              rel="nofollow"
+              target="_blank"
+              >About</a
+            >
+          </li>
+        </ul>
+        <button
+          class="nav__btn"
+          id="btn-open-nav-menu"
+          type="button"
+          title="Show Navigation Menu"
+        >
+          <i data-feather="menu"></i>
+        </button>
+      </div>
+    </nav>
+    <div id="app-wrapper"></div>
+    <footer class="footer">
+      <div class="footer__content-wrapper">
+        <div class="footer__brand">
+          <a class="brand" href="/#/">FeedME</a>
+          <p class="footer__motto">Find a restaurant.</p>
+        </div>
+        <ul class="footer__links">
+          <li>
+            <a class="footer__link" href="/#/about">About</a>
+          </li>
+          <li>
+            <a class="footer__link" href="/#/privacy-policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a class="footer__link" href="/#/blogs">Blogs</a>
+          </li>
+          <li>
+            <a class="footer__link" href="/#/contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <p class="footer__copyright">
+        © Copyright 2023 Feedme Inc. All rights reserved.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.text {
+  line-height: 1.25;
+
+  &--bold {
+    font-weight: bold;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--primary {
+    color: map.get($colors, primary);
+  }
+
+  &--slate {
+    color: map.get($colors, slate);
+  }
+
+  &--md {
+    @include font-scale(2);
+  }
+
+  &--lg {
+    @include font-scale(3);
+  }
+
+  &--xl {
+    @include font-scale(4);
+  }
+
+  &--xxl {
+    @include font-scale(6);
+  }
+
+  &--display-error {
+    margin: 1em auto;
+    max-width: 56ch;
+  }
+}

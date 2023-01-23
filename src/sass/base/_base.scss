@@ -1,0 +1,38 @@
+@use "sass:map";
+
+@use "../abstracts/" as *;
+
+* {
+  box-sizing: border-box;
+  &:focus {
+    outline: none;
+    @extend %focus-ring;
+  }
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-size: clamp(1.6rem, 1.5rem + 0.18vw, 2rem);
+  font-family: map.get($font-families, sans-serif);
+}
+
+main {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+button,
+input,
+textarea {
+  @include touch-target;
+}
+
+img {
+  max-inline-size: 100%;
+}

@@ -1,0 +1,86 @@
+@use "sass:map";
+@use "./variables" as *;
+@use "./mixins" as *;
+
+%focus-ring {
+  box-shadow: 0 0 0 4px rgba(map.get($colors, primary), 0.5);
+}
+
+%shadow-sm {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+%rounded {
+  border-radius: 0.25rem;
+}
+
+.border-primary {
+  border: 2px solid map.get($colors, primary);
+}
+
+.text-center {
+  text-align: center;
+}
+
+@each $key, $value in $spacing {
+  %m-#{$key} {
+    margin: $value;
+  }
+
+  %my-#{$key} {
+    margin-top: $value;
+    margin-bottom: $value;
+  }
+
+  %mx-#{$key} {
+    margin-left: $value;
+    margin-right: $value;
+  }
+
+  %mt-#{$key} {
+    margin-top: $value;
+  }
+
+  %mb-#{$key} {
+    margin-bottom: $value;
+  }
+
+  %ml-#{$key} {
+    margin-left: $value;
+  }
+
+  %mr-#{$key} {
+    margin-right: $value;
+  }
+
+  %p-#{$key} {
+    padding: $value;
+  }
+
+  %py-#{$key} {
+    padding-top: $value;
+    padding-bottom: $value;
+  }
+
+  %px-#{$key} {
+    padding-left: $value;
+    padding-right: $value;
+  }
+
+  %pt-#{$key} {
+    padding-top: $value;
+  }
+
+  %pb-#{$key} {
+    padding-bottom: $value;
+  }
+
+  %pl-#{$key} {
+    padding-left: $value;
+  }
+
+  %pr-#{$key} {
+    padding-right: $value;
+  }
+}

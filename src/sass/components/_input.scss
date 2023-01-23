@@ -1,0 +1,24 @@
+@use "sass:map";
+@use "../abstracts" as *;
+
+.input {
+  @extend %shadow-sm, %px-4;
+  @include touch-target;
+  width: 100%;
+  border: none;
+  font-family: inherit;
+  font-size: 1em;
+  &--textarea {
+    @extend %py-4;
+    resize: none;
+  }
+  &--error {
+    border: 1px solid map.get($colors, primary);
+    &::placeholder {
+      color: map.get($colors, primary);
+    }
+  }
+  &:focus {
+    @extend %focus-ring;
+  }
+}

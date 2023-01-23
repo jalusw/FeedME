@@ -1,0 +1,51 @@
+@use "../abstracts/" as *;
+
+.card {
+  &__header {
+  }
+
+  &__content {
+    margin-top: 0.5rem;
+    min-height: 8rem;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.75rem;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__rating-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+  }
+
+  &__image {
+    @extend %rounded;
+    object-fit: cover;
+  }
+
+  &__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-weight: bold;
+    line-height: 1.25;
+  }
+
+  &__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.25;
+  }
+}

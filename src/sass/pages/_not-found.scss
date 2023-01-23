@@ -1,0 +1,20 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.not-found {
+  @include container;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.not-found-code {
+  @include font-scale(8);
+  font-weight: bold;
+  color: map.get($colors, primary);
+}
+
+.not-found-description {
+  margin: 0.25rem auto 3rem auto;
+  max-inline-size: 66ch;
+  color: map.get($colors, slate);
+}

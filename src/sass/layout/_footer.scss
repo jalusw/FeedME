@@ -1,0 +1,45 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.footer {
+  @extend %shadow-sm, %mt-10;
+  position: sticky;
+  top: 100%;
+  padding: 1.5rem 0;
+
+  &__content-wrapper {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    @media screen and (min-width: map.get($breakpoints,sm)) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+  }
+
+  &__link {
+    @include touch-target;
+    text-decoration: none;
+    color: map.get($colors, slate);
+  }
+
+  &__motto {
+    @extend %mt-1;
+    color: map.get($colors, slate);
+  }
+
+  &__copyright {
+    @extend %mt-4;
+    text-align: center;
+    color: map.get($colors, slate);
+  }
+}

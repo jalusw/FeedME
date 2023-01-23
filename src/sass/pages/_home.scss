@@ -1,0 +1,61 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.home-header {
+  padding: 8.5rem 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/hero.jpg?as=webp&w=480");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__content-wrapper {
+    @include container;
+    text-align: center;
+  }
+
+  &__heading {
+    @include font-scale(3);
+    font-weight: bold;
+    line-height: 1.25;
+    color: map.get($colors, accent);
+  }
+
+  &__text {
+    margin: auto;
+    max-width: 56ch;
+    line-height: 1.25;
+    color: map.get($colors, accent);
+  }
+
+  @media screen and (min-width: map.get($breakpoints,md)) {
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../images/hero.jpg?as=webp&w=768");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @media screen and (min-width: map.get($breakpoints,lg)) {
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("../images/hero.jpg?as=webp&w=1280");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.home-main {
+  @include container;
+  margin: 4rem auto;
+}

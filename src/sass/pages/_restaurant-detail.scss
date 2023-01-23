@@ -1,0 +1,118 @@
+@use "sass:map";
+@use "../abstracts/" as *;
+
+.restaurant-detail-header {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 1rem;
+
+  &__image-wrapper {
+    flex: 1;
+  }
+  &__content-wrapper {
+    flex: 1;
+  }
+
+  &__rating-wrapper {
+    @extend %mt-1;
+    display: flex;
+    align-items: center;
+    column-gap: map.get($spacing, "1");
+  }
+
+  &__categories-wrapper {
+    @extend %mt-2;
+  }
+
+  &__address-wrapper {
+    @extend %mt-1;
+  }
+
+  &__favourite-wrapper {
+    @extend %mt-4;
+  }
+
+  @media screen and (min-width: map.get($breakpoints,md)) {
+    flex-direction: row;
+  }
+}
+
+.restaurant-detail-main {
+  @include container;
+  &__menus-wrapper {
+    @extend %mt-8;
+    display: flex;
+    flex-direction: column;
+    row-gap: map.get($spacing, "4");
+    @media screen and (min-width: map.get($breakpoints,sm)) {
+      flex-direction: row;
+    }
+  }
+  &__foods-wrapper {
+    flex: 1;
+  }
+  &__drinks-wrapper {
+    flex: 1;
+  }
+
+  &__form-review-wrapper {
+    @extend %mt-8;
+  }
+
+  &__reviews-wrapper {
+    @extend %mt-8;
+  }
+}
+
+.restaurant-detail-image {
+  @extend %rounded;
+  height: 250px;
+  object-fit: cover;
+  @media screen and (min-width: map.get($breakpoints,md)) {
+    height: 200px;
+  }
+}
+
+.restaurant-detail-name {
+  @include font-scale(1);
+  font-weight: bold;
+}
+
+.restaurant-detail-description {
+  line-height: 1.5;
+}
+
+.restaurant-detail-sub-heading {
+  font-weight: bold;
+  color: map.get($colors, primary);
+}
+
+.restaurant-detail-foods {
+  @extend %mt-2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.restaurant-detail-drinks {
+  @extend .restaurant-detail-foods;
+}
+
+.restaurant-detail-review {
+  @extend %shadow-sm, %rounded, %my-6, %p-4;
+  &__body {
+    @extend %mt-4;
+  }
+  &__name {
+    font-weight: bold;
+    color: map.get($colors, primary);
+  }
+}
+
+.restaurant-detail-form-review {
+  &__input-wrapper {
+    @extend %my-4;
+  }
+}
