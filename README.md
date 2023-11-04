@@ -1,5 +1,11 @@
 # Feedme
 
-Submission Project Front End Web Developer Expert Dicoding
+Project Submission Dari Kelas Menjadi Front End Developer Expert (MFWD) - Dicoding
 
-Production : https://feedme-f54b0.web.app/
+## Production Demo
+
+
+## API Source
+
+Restaurant API Dicoding
+- https://restaurant-api.dicoding.dev/#/
